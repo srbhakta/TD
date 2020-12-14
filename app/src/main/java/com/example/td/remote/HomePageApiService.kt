@@ -34,7 +34,7 @@ object HomePageApi {
 
     /**
      * Creates retrofit service instance.
-     * By using this will be be calling the states.json api.
+     * By using this will be be calling the home api.
      */
     val retrofitService: HomePageApiService by lazy {
         retrofit.create(HomePageApiService::class.java)
