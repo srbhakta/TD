@@ -108,26 +108,7 @@ fun ImageTitleDescriptionCard(card: Card) {
         CoilImage(data = url)
         Row(modifier = Modifier.padding(8.dp),
             verticalAlignment = Alignment.Bottom){
-            Column {
-                card.title?.let {
-                    Text(
-                        it.value,
-                        style = TextStyle(
-                            fontSize = TextUnit.Companion.Sp(it.attributes.font.size),
-                            color = Color(it.attributes.text_color.toColorInt())
-                        )
-                    )
-                }
-                card.description?.let {
-                    Text(
-                        it.value,
-                        style = TextStyle(
-                            fontSize = TextUnit.Companion.Sp(it.attributes.font.size),
-                            color = Color(it.attributes.text_color.toColorInt())
-                        )
-                    )
-                }
-            }
+            TitleDescriptionCard(card = card)
         }
     }
 }
